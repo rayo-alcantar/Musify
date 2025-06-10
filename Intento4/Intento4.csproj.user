@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\diego\source\repos\Intento4\Intento4\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="1989.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BibliotecaPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExplorarPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InicioPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Jaden.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Justice.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoginAdministrador.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PlaylistPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pop.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Rauw.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Reggaeton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegistrarWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Rock.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RyB.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sabrina.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UVST.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="1989.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminDashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BibliotecaPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExplorarPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InicioPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Jaden.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Justice.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoginAdministrador.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PlaylistPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pop.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Rauw.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Reggaeton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RegistrarWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Rock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RyB.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sabrina.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UVST.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

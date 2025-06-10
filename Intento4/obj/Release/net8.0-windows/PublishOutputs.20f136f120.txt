@@ -1,0 +1,12 @@
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\Intento4.exe
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\Intento4.dll
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\Intento4.deps.json
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\Intento4.runtimeconfig.json
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\Intento4.pdb
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\DnsClient.dll
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\MongoDB.Bson.dll
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\MongoDB.Driver.dll
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\SharpCompress.dll
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\Snappier.dll
+C:\Users\diego\OneDrive\Documentos\Nueva carpeta (2)\ZstdSharp.dll

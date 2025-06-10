@@ -1,0 +1,12 @@
+C:\Users\diego\OneDrive\Documentos\Musify\Intento4.exe
+C:\Users\diego\OneDrive\Documentos\Musify\Intento4.dll
+C:\Users\diego\OneDrive\Documentos\Musify\Intento4.deps.json
+C:\Users\diego\OneDrive\Documentos\Musify\Intento4.runtimeconfig.json
+C:\Users\diego\OneDrive\Documentos\Musify\Intento4.pdb
+C:\Users\diego\OneDrive\Documentos\Musify\DnsClient.dll
+C:\Users\diego\OneDrive\Documentos\Musify\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\diego\OneDrive\Documentos\Musify\MongoDB.Bson.dll
+C:\Users\diego\OneDrive\Documentos\Musify\MongoDB.Driver.dll
+C:\Users\diego\OneDrive\Documentos\Musify\SharpCompress.dll
+C:\Users\diego\OneDrive\Documentos\Musify\Snappier.dll
+C:\Users\diego\OneDrive\Documentos\Musify\ZstdSharp.dll

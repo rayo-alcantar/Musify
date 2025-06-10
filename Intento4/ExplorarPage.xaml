@@ -1,0 +1,81 @@
+﻿<Page x:Class="Intento4.ExplorarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Intento4"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExplorarPage">
+<Grid Margin="10">
+    <!-- Título de la sección -->
+    <TextBlock Text="Explorar" FontSize="24" FontWeight="Bold" Foreground="White" Margin="212,10,10,10" />
+
+    <!-- Contenido principal -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="212,50,0,0">
+        <StackPanel Orientation="Vertical" Margin="10">
+            <!-- Sección de géneros populares -->
+            <TextBlock Text="Géneros Populares" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,20,0,10" />
+            <WrapPanel HorizontalAlignment="Left">
+                <!-- Tarjeta de género -->
+                    <Button Background="#1DB954" Width="150" Height="150"  Margin="10" Click="Boton_Popclick">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Pop" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                    <Button Background="#FF3E3E" Width="150" Height="150"  Margin="10" Click="Boton_Rockclick" >
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Rock" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                    <Button Background="#FFC107" Width="150" Height="150"  Margin="10" Click="Boton_Reggaetonclick">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Reggaeton" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                    <Button Background="#673AB7" Width="150" Height="150" Margin="10" Click="Boton_RyBclick">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="RyB" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+            </WrapPanel>
+
+            <!-- Sección de tendencias -->
+            <TextBlock Text="Tendencias" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,30,0,10" />
+            <StackPanel>
+                <!-- Canción de tendencia -->
+                    <Button Background="Transparent" BorderBrush="Transparent" Margin="10" Height="70" VerticalAlignment="Center" HorizontalAlignment="Left" Click=" Boton_APTclick">
+                        <StackPanel Orientation="Horizontal" Background="#1A1A1A" VerticalAlignment="Center" Width="518">
+                            <StackPanel VerticalAlignment="Center" Margin="10">
+                                <TextBlock Text="APT" FontSize="14" Foreground="White" FontWeight="Bold" />
+                                <TextBlock Text="ROSÉ, Bruno Mars" FontSize="12" Foreground="Gray" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+
+                    <!-- Más canciones -->
+                    <Button Background="Transparent" BorderBrush="Transparent" Margin="10" Height="70" VerticalAlignment="Center" HorizontalAlignment="Left" Click="Boton_DWSclick">
+                        <StackPanel Orientation="Horizontal" Background="#1A1A1A" VerticalAlignment="Center" Width="518">
+                            <StackPanel VerticalAlignment="Center" Margin="10">
+                                <TextBlock Text="Die With A Smile" FontSize="14" Foreground="White" FontWeight="Bold" />
+                                <TextBlock Text="Lady Gaga, Bruno Mars" FontSize="12" Foreground="Gray" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Background="Transparent" BorderBrush="Transparent" Margin="10" Height="70" VerticalAlignment="Center" HorizontalAlignment="Left" Click=" Boton_Lutherclick">
+                        <StackPanel Orientation="Horizontal" Background="#1A1A1A" VerticalAlignment="Center" Width="518">
+                            <StackPanel VerticalAlignment="Center" Margin="10">
+                                <TextBlock Text="luther (with sza)" FontSize="14" Foreground="White" FontWeight="Bold" />
+                                <TextBlock Text="Kendrick Lamar, SZA" FontSize="12" Foreground="Gray" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            
+
+        </StackPanel>
+    </ScrollViewer>
+</Grid>
+</Page>

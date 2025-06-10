@@ -1,0 +1,91 @@
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+project.lock.json
+project.assets.json
+PackageLock.json
+
+# Windows crash dumps
+*.mdmp
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# Others
+*.dbmdl
+*.bak
+*.tmp
+*.temp
+*.pidb
+*.svclog
+*.pdb
+
+# Rider
+.idea/
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# WPF generated files
+*.g.cs
+*.g.i.cs
+*.i.cs
+*.xaml.cs
+
+# Dotnet specific
+*.dll
+*.exe
+*.cache
+*.config
+*.lock.json
+
+# Local test results
+TestResults/
+*.trx
+
+# User secrets
+secrets.json
+
+# Publish artifacts
+publish/
+AppPackages/
+*.appx
+*.appxbundle
+*.msix
+*.msixbundle
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Backup files
+*.bak
+*.old
+
+# MongoDB local artifacts (precaución si llegas a usar local)
+dump/
+data/
+mongod.lock
