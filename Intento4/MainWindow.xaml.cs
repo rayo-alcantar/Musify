@@ -7,38 +7,62 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Collections.Generic;
 using MongoDB.Driver;
+using Intento4.Models;
+using Intento4.Servicios;
 
 namespace Intento4
 {
+    /// <summary>
+    /// Ventana principal de la aplicación. Responsable de la reproducción de música,
+    /// la gestión de la lista de reproducción actual y la navegación entre las diferentes páginas (vistas).
+    /// </summary>
     public partial class MainWindow : Window
     {
-        private MediaPlayer mediaPlayer = new MediaPlayer();
-        private GridFSBucket gridFS;
-        public List<Cancion> ListaActual { get; private set; } = new List<Cancion>(); // Lista actual de reproducción
-        private int currentSongIndex; // Índice de la canción actual
-        private bool isPaused = false; // Variable para rastrear el estado de la canción
+        private MediaPlayer mediaPlayer = new MediaPlayer(); // Objeto para la reproducción de audio.
+        private GridFSBucket gridFS; // Para acceder a los archivos de canciones en MongoDB GridFS.
 
-        public MainWindow()
+        /// <summary>
+        /// Lista de canciones actualmente cargadas en el reproductor.
+        /// Puede ser la biblioteca completa o una playlist específica.
+        /// </summary>
+        public List<Cancion> ListaActual { get; private set; } = new List<Cancion>();
+        private int currentSongIndex; // Índice de la canción que se está reproduciendo o está seleccionada en ListaActual.
+        private bool isPaused = false; // Indica si la reproducción está actualmente en pausa.
+
+        /// <summary>
+        /// Obtiene el objeto Usuario que representa al usuario actualmente logueado.
+        /// Esta propiedad se establece durante la inicialización de MainWindow,
+        /// recibiendo el usuario desde LoginWindow.
+        /// </summary>
+        public Usuario CurrentUser { get; private set; }
+
+        /// <summary>
+        /// Constructor de la ventana principal.
+        /// </summary>
+        /// <param name="user">El objeto Usuario que ha iniciado sesión.</param>
+        public MainWindow(Usuario user)
         {
             InitializeComponent();
+            CurrentUser = user; // Almacena el usuario logueado.
 
-            // Conexión a MongoDB
-            var client = new MongoClient("mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/Musify?retryWrites=true&w=majority");
-            var database = client.GetDatabase("Musify");
+            // Inicializa la conexión a MongoDB GridFS para la carga de canciones.
+            // Utiliza la cadena de conexión centralizada de MongoDBService.
+            var client = new MongoClient(MongoDBService.ConnectionString);
+            var database = client.GetDatabase("Musify"); // El nombre de la BD podría centralizarse.
             gridFS = new GridFSBucket(database);
-            ShowInicio2_Click(null, null);
-            // Inicializar la lista de canciones
-            CargarCancionesDesdeMongoDB();
+
+            ShowInicio2_Click(null, null); // Carga la página de inicio por defecto.
+            CargarCancionesDesdeMongoDB(); // Carga la biblioteca inicial de canciones.
         }
 
+        /// <summary>
+        /// Carga la lista inicial de canciones desde MongoDB GridFS al iniciar la aplicación.
+        /// </summary>
         private async void CargarCancionesDesdeMongoDB()
         {
             try
             {
-                // Obtener todos los archivos en la colección fs.files
                 var files = await gridFS.Find(Builders<GridFSFileInfo>.Filter.Empty).ToListAsync();
-
-                // Transformar los datos para la lista actual
                 ListaActual = files.Select(file => new Cancion
                 {
                     titulo = file.Metadata.Contains("titulo") ? file.Metadata["titulo"].AsString : "Título desconocido",
@@ -49,10 +73,9 @@ namespace Intento4
 
                 PlayerStatus.Text = $"Se cargaron {ListaActual.Count} canciones desde la base de datos.";
 
-                // Reproducir la primera canción si hay canciones en la lista
                 if (ListaActual.Count > 0)
                 {
-                    currentSongIndex = 0; // Iniciar desde la primera canción
+                    currentSongIndex = 0;
                     ReproducirCancionDesdeMongoDB(ListaActual[currentSongIndex]._id);
                 }
             }
@@ -62,57 +85,66 @@ namespace Intento4
             }
         }
 
+        /// <summary>
+        /// Actualiza la lista de reproducción actual con un nuevo conjunto de canciones.
+        /// Esto es útil cuando se cambia de una playlist a otra o se carga una vista diferente.
+        /// </summary>
+        /// <param name="nuevasCanciones">La nueva lista de canciones a reproducir.</param>
         public void ActualizarListaReproduccion(List<Cancion> nuevasCanciones)
         {
             ListaActual = nuevasCanciones;
-           
-
-            // Reiniciar el índice a la primera canción de la nueva lista
             if (ListaActual.Count > 0)
             {
                 currentSongIndex = 0;
                 ReproducirCancionDesdeMongoDB(ListaActual[currentSongIndex]._id);
             }
+            else
+            {
+                // Si la nueva lista está vacía, detener la reproducción y limpiar UI.
+                mediaPlayer.Stop();
+                SongTitle.Text = "Sin canción";
+                SongArtist.Text = "N/A";
+                PlayerStatus.Text = "No hay canciones para reproducir.";
+            }
         }
 
+        /// <summary>
+        /// Descarga y reproduce una canción específica desde MongoDB GridFS usando su ID.
+        /// </summary>
+        /// <param name="id">El ObjectId de la canción en GridFS.</param>
         public async void ReproducirCancionDesdeMongoDB(ObjectId id)
         {
             try
             {
-                mediaPlayer.Stop(); // Detener la canción actual
+                mediaPlayer.Stop();
 
-                // Obtener metadatos de la canción
                 var filter = Builders<GridFSFileInfo>.Filter.Eq("_id", id);
                 var fileInfo = await gridFS.Find(filter).FirstOrDefaultAsync();
 
                 if (fileInfo == null)
                 {
-                    PlayerStatus.Text = "Error: Canción no encontrada.";
+                    PlayerStatus.Text = "Error: Canción no encontrada en GridFS.";
                     return;
                 }
 
-                // Mostrar metadatos en la interfaz
                 var metadata = fileInfo.Metadata;
                 SongTitle.Text = metadata.Contains("titulo") ? metadata["titulo"].AsString : "Título desconocido";
                 SongArtist.Text = metadata.Contains("artista") ? metadata["artista"].AsString : "Artista desconocido";
 
-                // Crear una ruta temporal única para el archivo
+                // Descarga a un archivo temporal para reproducción.
                 string tempFilePath = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + "_" + fileInfo.Filename);
 
-                // Descargar el archivo desde GridFS
                 using (var stream = new FileStream(tempFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
                     await gridFS.DownloadToStreamAsync(id, stream);
                 }
 
-                // Reproducir la canción desde el archivo temporal
                 mediaPlayer.Open(new Uri(tempFilePath));
                 mediaPlayer.Play();
-
-                // Actualizar el estado del reproductor
                 PlayerStatus.Text = "Reproduciendo: " + fileInfo.Filename;
+                isPaused = false; // Asegura que el estado de pausa se reinicie.
 
-                // Configurar evento para eliminar el archivo temporal después de reproducirlo
+                // Limpia el archivo temporal después de que la canción termine.
                 mediaPlayer.MediaEnded += (s, e) =>
                 {
                     try
@@ -122,6 +154,7 @@ namespace Intento4
                     }
                     catch (Exception cleanupEx)
                     {
+                        // Log o manejar error de limpieza si es necesario.
                         Console.WriteLine($"Error al eliminar archivo temporal: {cleanupEx.Message}");
                     }
                 };
@@ -131,15 +164,17 @@ namespace Intento4
                 PlayerStatus.Text = $"Error al reproducir la canción: {ex.Message}";
             }
         }
+
+        // --- Métodos de navegación y control de reproducción ---
         private void CargarInicioPage()
         {
-            var inicioPage = new InicioPage(this); // Pasar la instancia de MainWindow
-            MainFrame.Navigate(inicioPage);        // Navegar a InicioPage
+            var inicioPage = new InicioPage(this);
+            MainFrame.Navigate(inicioPage);
         }
         private void CargarExplorarPage()
         {
-            var explorarPage = new ExplorarPage(this); // Pasar la instancia de MainWindow
-            MainFrame.Navigate(explorarPage);        // Navegar a InicioPage
+            var explorarPage = new ExplorarPage(this);
+            MainFrame.Navigate(explorarPage);
         }
         private void NextSong_Click(object sender, RoutedEventArgs e)
         {
@@ -161,6 +196,8 @@ namespace Intento4
 
         private void PauseSong_Click(object sender, RoutedEventArgs e)
         {
+            if (mediaPlayer.Source == null) return; // No hay canción cargada
+
             if (isPaused)
             {
                 mediaPlayer.Play();
@@ -175,14 +212,11 @@ namespace Intento4
             }
         }
 
-
-
-        // Métodos para cambiar de página (navegación entre páginas de la app)
+        // --- Navegación del menú lateral ---
         private void ShowInicio2_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new InicioPage(this));
         }
-
 
         private void ShowExplorar_Click(object sender, RoutedEventArgs e)
         {
