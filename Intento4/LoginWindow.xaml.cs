@@ -78,7 +78,7 @@ namespace Intento4
             mainWindow.Show();
 
             Application.Current.MainWindow = mainWindow; // 1
-            this.Hide();                                 // 2
+            this.Close();                                // ahora sí, destruye el login
         }
 
         /* ========== Placeholders accesibles ========== */
