@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IbTKzhZRSnk=",
+  "dgSpecHash": "QV5aBHzy1YI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\angel\\Documents\\Intento4\\Intento4\\Intento4.csproj",
+  "projectFilePath": "C:\\Users\\angel\\Documents\\Intento4\\intento4\\Intento4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\angel\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",

@@ -18,12 +18,15 @@
 
         <!-- Usuario -->
         <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Margin="554,364,0,0">
+            <!-- Label accesible para el campo de usuario -->
+            <Label x:Name="lblUsuario" Content="Correo electrónico" Visibility="Collapsed"/>
             <!-- Campo de texto para usuario -->
             <TextBox Name="usernameTextBox" Width="200" Height="30" 
                      Foreground="White" Background="#2A2A2A" 
                      BorderBrush="#1DB954" BorderThickness="1" 
                      FontSize="14" FontWeight="Bold" 
-                     GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus" />
+                     GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus"
+                     AutomationProperties.LabeledBy="{Binding ElementName=lblUsuario}" />
 
             <!-- Placeholder (TextBlock) para el campo de usuario -->
             <TextBlock x:Name="UsernamePlaceholder" Text="Correo" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0" FontSize="14" FontWeight="Bold" IsHitTestVisible="False" />
