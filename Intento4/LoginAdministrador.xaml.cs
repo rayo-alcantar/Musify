@@ -10,32 +10,35 @@ namespace Intento4
             InitializeComponent();
         }
 
-        // Manejo del clic en el botón "Ingresar"
+        /// <summary>
+        /// Botón “Ingresar” de la ventana de administrador.
+        /// Valida credenciales, abre el dashboard y oculta el login.
+        /// </summary>
         private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
         {
-            // Obtener los valores de los campos de usuario y contraseña
-            string usuario = txtNombre.Text;
-            string contraseña = txtContraseña.Password;
+            string usuario     = txtNombre.Text.Trim();
+            string contraseña  = txtContraseña.Password;
 
-            // Validar el usuario y la contraseña
-            if (usuario == "Itzel" && contraseña == "Spiderman")
+            if (usuario.Equals("Itzel", StringComparison.OrdinalIgnoreCase) &&
+                contraseña == "Spiderman")
             {
-                // Si las credenciales son correctas, cerrar esta ventana
-                MessageBox.Show("Acceso concedido.", "Bienvenido", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Acceso concedido.",
+                                "Bienvenido", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // Aquí puedes agregar el código para abrir otra ventana o realizar otras acciones
-                // Ejemplo:
-                // MainWindow mainWindow = new MainWindow();
-                AdminDashboard adminDashboard = new AdminDashboard();
+                // Abre el panel de administración
+                var adminDashboard = new AdminDashboard();
                 adminDashboard.Show();
-                this.Close();
-                // mainWindow.Show();
-                // this.Close(); // Cierra la ventana actual
+
+                // Convierte el dashboard en la nueva ventana principal
+                Application.Current.MainWindow = adminDashboard;
+
+                // Oculta (NO cierra) la ventana de login para evitar que WPF apague la app
+                this.Hide();
             }
             else
             {
-                // Si las credenciales son incorrectas, mostrar un mensaje de error
-                MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Usuario o contraseña incorrectos.",
+                                "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

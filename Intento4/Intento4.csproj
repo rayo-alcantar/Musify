@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <!-- ====== Propiedades generales ====== -->
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
@@ -8,18 +9,19 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <!-- ====== NuGet ====== -->
   <ItemGroup>
-    <None Remove="Images\fondo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MongoDB.Bson" Version="3.0.0" />
+    <PackageReference Include="MongoDB.Bson"  Version="3.0.0" />
     <PackageReference Include="MongoDB.Driver" Version="3.0.0" />
-	<PackageReference Include="DnsClient" Version="1.6.1" />
+    <PackageReference Include="DnsClient"      Version="1.6.1" />
   </ItemGroup>
 
+  <!-- ====== Recursos WPF ======
+       * Todo lo que haya en Images\*.jpg  o Images\*.png queda embebido.
+       * No necesitas añadir uno por uno.                        -->
   <ItemGroup>
-    <Resource Include="Images\fondo.png" />
+    <Resource Include="Images\*.jpg" />
+    <Resource Include="Images\*.png" />
   </ItemGroup>
 
 </Project>

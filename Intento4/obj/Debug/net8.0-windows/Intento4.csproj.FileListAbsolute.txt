@@ -142,6 +142,7 @@ C:\Users\angel\Documents\Intento4\Intento4\bin\Debug\net8.0-windows\Snappier.dll
 C:\Users\angel\Documents\Intento4\Intento4\bin\Debug\net8.0-windows\ZstdSharp.dll
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\Intento4.csproj.AssemblyReference.cache
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\AdminDashboard.baml
+C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\InicioPage.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\LoginAdministrador.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\LoginWindow.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\MainWindow.baml
@@ -168,10 +169,10 @@ C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\UVST.g.cs
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\Intento4_MarkupCompile.cache
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\Intento4_MarkupCompile.lref
+C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\App.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\1989.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\BibliotecaPage.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\ExplorarPage.baml
-C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\InicioPage.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\Jaden.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\Justice.baml
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\PlaylistPage.baml

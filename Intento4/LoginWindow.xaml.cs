@@ -2,119 +2,105 @@
 using MongoDB.Driver;
 using System;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace Intento4
 {
+    /// <summary>
+    /// Ventana de inicio de sesión de usuario.
+    /// • Reasigna MainWindow antes de ocultar la ventana de login
+    /// • Deja la conexión y la lógica de validación intactas
+    /// </summary>
     public partial class LoginWindow : Window
     {
-        private IMongoDatabase _database;
+        private readonly IMongoDatabase _database;
 
         public LoginWindow()
         {
-            // Cadena de conexión a MongoDB Atlas
-            string connectionString = "mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/myDatabase?retryWrites=true&w=majority";
-            var client = new MongoClient(connectionString);
-            _database = client.GetDatabase("Musify");
             InitializeComponent();
+
+            const string connectionString =
+                "mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/myDatabase?retryWrites=true&w=majority";
+
+            var client = new MongoClient(connectionString);
+            _database  = client.GetDatabase("Musify");
         }
 
+        /* ========== Login de administrador ========== */
         private void LoginAdminButton_Click(object sender, RoutedEventArgs e)
         {
-            // Crear la instancia de la ventana de administrador
-            LoginAdministrador loginAdministrador = new LoginAdministrador();
+            var adminLogin = new LoginAdministrador();
+            adminLogin.Show();
 
-            // Mostrar la ventana de administrador
-            loginAdministrador.Show();
+            // 1 → nueva ventana principal
+            Application.Current.MainWindow = adminLogin;
 
-            // Cerrar la ventana actual (LoginWindow)
-            this.Close();
+            // 2 → oculta el login
+            this.Hide();
         }
 
+        /* ========== Login de usuario normal ========== */
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            // Obtener los valores de los campos
-            string username = usernameTextBox.Text;
+            string username = usernameTextBox.Text.Trim();
             string password = passwordBox.Password;
 
-            // Lógica de validación
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Por favor, ingrese usuario y contraseña.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Por favor, ingrese usuario y contraseña.",
+                                "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            // Validar usuario y contraseña en MongoDB
-            var coleccion = _database.GetCollection<BsonDocument>("Usuario"); // Nombre de tu colección
+            var usuarios = _database.GetCollection<BsonDocument>("Usuario");
+            var filtro   = Builders<BsonDocument>.Filter.Eq("correo_electronico", username);
+            var usuario  = usuarios.Find(filtro).FirstOrDefault();
 
-            var filtro = Builders<BsonDocument>.Filter.Eq("correo_electronico", username);
-            var usuario = coleccion.Find(filtro).FirstOrDefault();
-
-            if (usuario != null)
+            if (usuario is null)
             {
-                // Validar contraseña
-                string contrasenaGuardada = usuario.GetValue("contraseña").AsString;
-
-                if (password == contrasenaGuardada) // Idealmente, usa hashes para mayor seguridad
-                {
-                    MessageBox.Show("Inicio de sesión exitoso", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    // Cerrar la ventana de inicio de sesión y abrir la siguiente ventana
-                    MainWindow mainWindow = new MainWindow();
-
-                    mainWindow.Show();
-                    this.Close(); // Cerrar la ventana de inicio de sesión
-                }
-                else
-                {
-                    MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                MessageBox.Show("El usuario no existe.",
+                                "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
-            else
+
+            string contrasenaGuardada = usuario["contraseña"].AsString;
+
+            if (password != contrasenaGuardada)          // (usa hashes en producción)
             {
-                MessageBox.Show("El usuario no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Contraseña incorrecta.",
+                                "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
+
+            MessageBox.Show("Inicio de sesión exitoso.",
+                            "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+
+            Application.Current.MainWindow = mainWindow; // 1
+            this.Hide();                                 // 2
         }
 
-        // Manejo de evento GotFocus y LostFocus para el campo "Usuario"
-        private void UsernameTextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
+        /* ========== Placeholders accesibles ========== */
+        private void UsernameTextBox_GotFocus(object sender, RoutedEventArgs e) =>
             UsernamePlaceholder.Visibility = Visibility.Collapsed;
-        }
 
-        private void UsernameTextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(usernameTextBox.Text))
-            {
-                UsernamePlaceholder.Visibility = Visibility.Visible;
-            }
-        }
+        private void UsernameTextBox_LostFocus(object sender, RoutedEventArgs e) =>
+            UsernamePlaceholder.Visibility =
+                string.IsNullOrEmpty(usernameTextBox.Text) ? Visibility.Visible : Visibility.Collapsed;
 
-        // Manejo de evento GotFocus y LostFocus para el campo "Contraseña"
-        private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
-        {
+        private void PasswordBox_GotFocus(object sender, RoutedEventArgs e) =>
             PasswordPlaceholder.Visibility = Visibility.Collapsed;
-        }
 
-        private void PasswordBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(passwordBox.Password))
-            {
-                PasswordPlaceholder.Visibility = Visibility.Visible;
-            }
-        }
+        private void PasswordBox_LostFocus(object sender, RoutedEventArgs e) =>
+            PasswordPlaceholder.Visibility =
+                string.IsNullOrEmpty(passwordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
 
-        // Lógica de la ventana de registro
+        /* ========== Registro ========== */
         private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
         {
-            RegistrarWindow registrarWindow = new RegistrarWindow();
-
-            // Mostrar la ventana de registro
-            registrarWindow.Show();
+            var registrar = new RegistrarWindow();
+            registrar.Show();
         }
     }
-
-   
-    }
-
-
+}
