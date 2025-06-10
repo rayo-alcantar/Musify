@@ -11,53 +11,45 @@ namespace Intento4
 {
     public partial class BibliotecaPage : Page
     {
-        private GridFSBucket gridFS;
-        private MainWindow reproductor;
-        private List<Cancion> CancionesOriginales; // Lista original de canciones
+        private readonly GridFSBucket   _gridFS;
+        private readonly MongoDBService _db;
+        private readonly MainWindow     _reproductor;
+
+        private List<Cancion>  CancionesOriginales = new();
+        private List<Playlist> PlaylistsPropias    = new();
 
         public BibliotecaPage(MainWindow reproductor)
         {
             InitializeComponent();
-            this.reproductor = reproductor;
-            // Conectar a MongoDB
-            var client = new MongoClient("mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/Musify?retryWrites=true&w=majority");
-            var database = client.GetDatabase("Musify");
-            gridFS = new GridFSBucket(database);
+            _reproductor = reproductor;
 
-            // Obtener todas las canciones al cargar la página
+            var client   = new MongoClient("mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/Musify?retryWrites=true&w=majority");
+            var database = client.GetDatabase("Musify");
+            _gridFS      = new GridFSBucket(database);
+
+            _db = new MongoDBService();
+
             ObtenerCancionestotales();
+            ObtenerPlaylistsUsuario();
         }
 
+        /* ========== CANCIONES ========== */
         private async void ObtenerCancionestotales()
         {
             try
             {
-                // Obtener todas las canciones de la base de datos sin filtro
-                var files = await gridFS.Find(Builders<GridFSFileInfo>.Filter.Empty).ToListAsync();
+                var files = await _gridFS.Find(Builders<GridFSFileInfo>.Filter.Empty).ToListAsync();
 
-                if (files.Count == 0)
-                {
-                    MessageBox.Show("No se encontraron canciones en la base de datos.");
-                    return;
-                }
-
-                // Transformar los datos para el Binding
                 CancionesOriginales = files.Select(file => new Cancion
                 {
-                    titulo = file.Metadata["titulo"].AsString,
+                    titulo  = file.Metadata["titulo"].AsString,
                     artista = file.Metadata["artista"].AsString,
-                    album = file.Metadata["album"].AsString,
-                    _id = file.Id
+                    album   = file.Metadata["album"].AsString,
+                    _id     = file.Id
                 }).ToList();
 
-                // Actualizar la lista de reproducción en el reproductor
-                if (reproductor != null)
-                {
-                    reproductor.ActualizarListaReproduccion(CancionesOriginales);
-                }
-
-                // Establecer las canciones como fuente de datos del ListBox
                 ListaCanciones.ItemsSource = CancionesOriginales;
+                _reproductor?.ActualizarListaReproduccion(CancionesOriginales);
             }
             catch (Exception ex)
             {
@@ -67,51 +59,45 @@ namespace Intento4
 
         private void ListaCanciones_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ListaCanciones.SelectedItem != null)
+            if (ListaCanciones.SelectedItem is Cancion sel)
+                _reproductor?.ReproducirCancionDesdeMongoDB(sel._id);
+        }
+
+        /* ========== PLAYLISTS PRIVADAS ========== */
+        private void ObtenerPlaylistsUsuario()
+        {
+            PlaylistsPropias = _db.ObtenerPlaylistsPorUsuario(Session.UserId);
+            PlaylistsListView.ItemsSource = PlaylistsPropias;   // ListView definido en XAML
+        }
+
+        private void PlaylistsListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (PlaylistsListView.SelectedItem is Playlist pl)
             {
-                // Obtener la canción seleccionada
-                var selectedSong = (Cancion)ListaCanciones.SelectedItem;
+                var canciones = pl.canciones
+                                   .Select(id => CancionesOriginales.FirstOrDefault(c => c._id == id))
+                                   .Where(c => c != null)
+                                   .ToList();
 
-                // Obtener el ID de la canción
-                ObjectId songId = selectedSong._id;
-
-                // Reproducir la canción utilizando el reproductor actual
-                if (reproductor != null)
-                {
-                    reproductor.ReproducirCancionDesdeMongoDB(songId);
-                }
-                else
-                {
-                    MessageBox.Show("Error: Reproductor no está inicializado.");
-                }
+                _reproductor?.ActualizarListaReproduccion(canciones);
             }
         }
 
-        // Evento para el cambio de texto en el cuadro de búsqueda
-        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        /* ========== Búsqueda local ========== */
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e) =>
             FiltrarCanciones(SearchBox.Text);
-        }
 
-        // Evento cuando el usuario hace clic en el botón de búsqueda
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void SearchButton_Click(object sender, RoutedEventArgs e) =>
             FiltrarCanciones(SearchBox.Text);
-        }
 
-        // Método para filtrar las canciones en función de la búsqueda
         private void FiltrarCanciones(string query)
         {
-            if (CancionesOriginales == null) return;
-
-            var cancionesFiltradas = CancionesOriginales
+            var filtradas = CancionesOriginales
                 .Where(c => c.titulo.Contains(query, StringComparison.OrdinalIgnoreCase) ||
                             c.artista.Contains(query, StringComparison.OrdinalIgnoreCase))
                 .ToList();
 
-            // Actualizar la lista de canciones mostradas en la interfaz
-            ListaCanciones.ItemsSource = cancionesFiltradas;
+            ListaCanciones.ItemsSource = filtradas;
         }
     }
 }
-

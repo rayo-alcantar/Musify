@@ -10,33 +10,37 @@ using System.Windows.Controls;
 
 namespace Intento4
 {
+    /// <summary>
+    /// Página para generar playlists privadas y reproducir canciones filtradas.
+    /// </summary>
     public partial class PlaylistPage : Page
     {
-        private GridFSBucket gridFS;
-        private MainWindow reproductor;
+        private readonly GridFSBucket    _gridFS;
+        private readonly MongoDBService  _db;
+        private readonly MainWindow      _reproductor;
+        private List<Cancion>            _cancionesGeneradas = new();
 
         public PlaylistPage(MainWindow reproductor)
         {
             InitializeComponent();
-            this.reproductor = reproductor;
 
-            // Conectar a MongoDB
-            var client = new MongoClient("mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/Musify?retryWrites=true&w=majority");
+            _reproductor = reproductor;
+
+            var client   = new MongoClient("mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/Musify?retryWrites=true&w=majority");
             var database = client.GetDatabase("Musify");
-            gridFS = new GridFSBucket(database);
+            _gridFS      = new GridFSBucket(database);
+
+            _db = new MongoDBService();
         }
 
+        /* ======= Filtros de categoría ======= */
         private void CategoryComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Limpiar las opciones previas
             optionsComboBox.Items.Clear();
             optionsComboBox.IsEnabled = true;
 
-            // Obtener la selección del ComboBox de categorías
-            var selectedCategory = (categoryComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-
-            // Agregar las opciones correspondientes según la categoría seleccionada
-            switch (selectedCategory)
+            var cat = (categoryComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
+            switch (cat)
             {
                 case "estado_animo":
                     optionsComboBox.Items.Add("Alegre");
@@ -44,80 +48,69 @@ namespace Intento4
                     optionsComboBox.Items.Add("Relajado");
                     optionsComboBox.Items.Add("Motivado");
                     break;
-
                 case "actividad":
                     optionsComboBox.Items.Add("Estudiar");
                     optionsComboBox.Items.Add("Hacer Ejercicio");
                     optionsComboBox.Items.Add("Relajarse");
                     optionsComboBox.Items.Add("Fiesta");
                     break;
-
                 case "momento_dia":
                     optionsComboBox.Items.Add("Mañana");
                     optionsComboBox.Items.Add("Tarde");
                     optionsComboBox.Items.Add("Noche");
                     break;
-
                 default:
                     optionsComboBox.IsEnabled = false;
                     break;
             }
         }
 
+        /* ======= Generar y guardar playlist privada ======= */
         private async void GenerarPlaylist_Click(object sender, RoutedEventArgs e)
         {
             if (optionsComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Por favor, selecciona una opción para generar la playlist.");
+                MessageBox.Show("Por favor, selecciona una opción.");
                 return;
             }
 
-            // Obtener la opción seleccionada
-            var selectedOption = optionsComboBox.SelectedItem.ToString();
+            string cat   = (categoryComboBox.SelectedItem as ComboBoxItem)!.Content.ToString();
+            string opt   = optionsComboBox.SelectedItem!.ToString();
+            string title = $"Playlist {opt}";
 
-            // Establecer el título de la playlist
-            string selectedCategory = (categoryComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-            string playlistTitle = $"Playlist {selectedOption}";
+            PlaylistTitle.Text = title;
+            await ObtenerCancionesFiltradas(cat, opt);
 
-            // Mostrar el título de la playlist
-            PlaylistTitle.Text = playlistTitle;
+            if (_cancionesGeneradas.Count == 0) return;
 
-            // Obtener canciones desde MongoDB basadas en el filtro
-            await ObtenerCancionesFiltradas(selectedCategory, selectedOption);
+            try
+            {
+                _db.GuardarPlaylistPrivada(title, _cancionesGeneradas.Select(c => c._id));
+                MessageBox.Show("Playlist guardada (solo tú la verás).");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al guardar: {ex.Message}");
+            }
         }
 
+        /* ======= Filtrar canciones en MongoDB ======= */
         private async Task ObtenerCancionesFiltradas(string category, string option)
         {
             try
             {
-                // Mostrar detalles del filtro
-                MessageBox.Show($"Aplicando filtro: metadata.{category.ToLower()} = {option}");
-
-                // Construir el filtro según la categoría y opción seleccionada
                 var filter = Builders<GridFSFileInfo>.Filter.Eq($"metadata.{category.ToLower()}", option);
-                var files = await gridFS.Find(filter).ToListAsync();
+                var files  = await _gridFS.Find(filter).ToListAsync();
 
-                // Verificar resultados
-                MessageBox.Show($"Número de canciones encontradas: {files.Count}");
-
-                if (files.Count == 0)
+                _cancionesGeneradas = files.Select(f => new Cancion
                 {
-                    MessageBox.Show($"No se encontraron canciones para '{option}'.");
-                    ListaCanciones.ItemsSource = null;
-                    return;
-                }
-
-                // Transformar los datos para el Binding
-                var canciones = files.Select(file => new Cancion
-                {
-                    titulo = file.Metadata["titulo"].AsString,
-                    artista = file.Metadata["artista"].AsString,
-                    album = file.Metadata["album"].AsString,
-                    _id = file.Id
+                    titulo  = f.Metadata["titulo"].AsString,
+                    artista = f.Metadata["artista"].AsString,
+                    album   = f.Metadata["album"].AsString,
+                    _id     = f.Id
                 }).ToList();
 
-                // Establecer las canciones como fuente de datos del ListBox
-                ListaCanciones.ItemsSource = canciones;
+                ListaCanciones.ItemsSource = _cancionesGeneradas;
             }
             catch (Exception ex)
             {
@@ -125,31 +118,11 @@ namespace Intento4
             }
         }
 
+        /* ======= Reproducir selección ======= */
         private void ListaCanciones_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ListaCanciones.SelectedItem != null)
-            {
-                // Obtener la canción seleccionada
-                var selectedSong = (Cancion)ListaCanciones.SelectedItem;
-
-                // Obtener el ID de la canción
-                ObjectId songId = selectedSong._id;
-
-                // Reproducir la canción utilizando el reproductor actual
-                if (reproductor != null)
-                {
-                    reproductor.ReproducirCancionDesdeMongoDB(songId);
-                }
-                else
-                {
-                    MessageBox.Show("Error: Reproductor no está inicializado.");
-                }
-            }
+            if (ListaCanciones.SelectedItem is Cancion song)
+                _reproductor?.ReproducirCancionDesdeMongoDB(song._id);
         }
     }
-
-    
 }
-
-   
-

@@ -7,8 +7,8 @@ namespace Intento4
 {
     /// <summary>
     /// Ventana de inicio de sesión de usuario.
-    /// • Reasigna MainWindow antes de ocultar la ventana de login
-    /// • Deja la conexión y la lógica de validación intactas
+    /// – Guarda la sesión (UserId y UserName).
+    /// – Reasigna MainWindow y cierra el login.
     /// </summary>
     public partial class LoginWindow : Window
     {
@@ -21,24 +21,21 @@ namespace Intento4
             const string connectionString =
                 "mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/myDatabase?retryWrites=true&w=majority";
 
-            var client = new MongoClient(connectionString);
-            _database  = client.GetDatabase("Musify");
+            var client  = new MongoClient(connectionString);
+            _database   = client.GetDatabase("Musify");
         }
 
-        /* ========== Login de administrador ========== */
+        /* ======= Login administrador ======= */
         private void LoginAdminButton_Click(object sender, RoutedEventArgs e)
         {
             var adminLogin = new LoginAdministrador();
             adminLogin.Show();
 
-            // 1 → nueva ventana principal
             Application.Current.MainWindow = adminLogin;
-
-            // 2 → oculta el login
-            this.Hide();
+            this.Close();   // destruimos el login
         }
 
-        /* ========== Login de usuario normal ========== */
+        /* ======= Login usuario normal ======= */
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string username = usernameTextBox.Text.Trim();
@@ -63,25 +60,29 @@ namespace Intento4
             }
 
             string contrasenaGuardada = usuario["contraseña"].AsString;
-
-            if (password != contrasenaGuardada)          // (usa hashes en producción)
+            if (password != contrasenaGuardada)       // (hash en producción)
             {
                 MessageBox.Show("Contraseña incorrecta.",
                                 "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            MessageBox.Show("Inicio de sesión exitoso.",
-                            "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+            /* ===  GUARDAR SESIÓN  === */
+            Session.UserId   = usuario["_id"].AsObjectId;
+            Session.UserName = usuario["nombre"].AsString;
+
+            MessageBox.Show($"Bienvenido, {Session.UserName}.",
+                            "Inicio de sesión exitoso",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
 
             var mainWindow = new MainWindow();
             mainWindow.Show();
 
-            Application.Current.MainWindow = mainWindow; // 1
-            this.Close();                                // ahora sí, destruye el login
+            Application.Current.MainWindow = mainWindow;
+            this.Close();
         }
 
-        /* ========== Placeholders accesibles ========== */
+        /* ======= Placeholders ======= */
         private void UsernameTextBox_GotFocus(object sender, RoutedEventArgs e) =>
             UsernamePlaceholder.Visibility = Visibility.Collapsed;
 
@@ -96,7 +97,6 @@ namespace Intento4
             PasswordPlaceholder.Visibility =
                 string.IsNullOrEmpty(passwordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
 
-        /* ========== Registro ========== */
         private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
         {
             var registrar = new RegistrarWindow();

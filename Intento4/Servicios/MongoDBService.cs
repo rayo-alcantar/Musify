@@ -1,99 +1,92 @@
 ﻿using System;
-using MongoDB.Driver;
-using MongoDB.Bson;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MongoDB.Driver.Core.Configuration;
 using System.IO;
+using System.Linq;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using MongoDB.Driver.GridFS;
 
-
-
-public class MongoDBService
+namespace Intento4   // ← el archivo estaba sin namespace; lo añadimos
 {
-    private IGridFSBucket _gridFSBucket;  // Variable de GridFS
-    private IMongoDatabase _database;
-    private IMongoCollection<Usuario> _usuariosCollection;
-    private IMongoCollection<Cancion> _cancionesCollection;
-    private IMongoCollection<Playlist> _playlistsCollection;
-
-    public MongoDBService()
+    public class MongoDBService
     {
-        string connectionString = "mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/Musify?retryWrites=true&w=majority"; // Actualiza con tus credenciales y base de datos
-        var client = new MongoClient(connectionString);
-        _database = client.GetDatabase("Musify"); // Nombre de la base de datos
+        private readonly IGridFSBucket _gridFSBucket;
+        private readonly IMongoDatabase _database;
+        private readonly IMongoCollection<Usuario>  _usuariosCollection;
+        private readonly IMongoCollection<Cancion>  _cancionesCollection;
+        private readonly IMongoCollection<Playlist> _playlistsCollection;
 
-        // Inicializar GridFSBucket
-        _gridFSBucket = new GridFSBucket(_database); // Inicializar _gridFSBucket
-
-        _usuariosCollection = _database.GetCollection<Usuario>("Usuario");
-        _cancionesCollection = _database.GetCollection<Cancion>("Cancion");
-        _playlistsCollection = _database.GetCollection<Playlist>("Playlist");
-    }
-
-    // Método para subir una canción a GridFS
-    public void UploadSong(string filePath, string fileName)
-    {
-        // Abrimos el archivo en modo de lectura
-        using (var stream = File.OpenRead(filePath))
+        public MongoDBService()
         {
-            // Subimos el archivo a GridFS
+            const string conn =
+                "mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/Musify?retryWrites=true&w=majority";
+
+            var client  = new MongoClient(conn);
+            _database   = client.GetDatabase("Musify");
+
+            _gridFSBucket        = new GridFSBucket(_database);
+            _usuariosCollection  = _database.GetCollection<Usuario>("Usuario");
+            _cancionesCollection = _database.GetCollection<Cancion>("Cancion");
+            _playlistsCollection = _database.GetCollection<Playlist>("Playlist");
+        }
+
+        /* ============  CANCIONES  ============ */
+
+        public void UploadSong(string filePath, string fileName)
+        {
+            using var stream = File.OpenRead(filePath);
             _gridFSBucket.UploadFromStream(fileName, stream);
         }
-    }
 
+        public Stream DownloadSong(string fileName)
+        {
+            var ms = new MemoryStream();
+            _gridFSBucket.DownloadToStreamByName(fileName, ms);
+            ms.Position = 0;
+            return ms;
+        }
 
-    // Método para obtener una canción desde GridFS
-    public Stream DownloadSong(string fileName)
-    {
-        var fileStream = new MemoryStream();
-        _gridFSBucket.DownloadToStreamByName(fileName, fileStream);
-        fileStream.Seek(0, SeekOrigin.Begin);
-        return fileStream;
-    }
+        public List<Cancion> ObtenerCanciones() =>
+            _cancionesCollection.Find(_ => true).ToList();
 
-    public void GuardarUsuario(Usuario usuario)
-    {
-        _usuariosCollection.InsertOne(usuario);
-    }
+        public void AgregarCancion(Cancion c) =>
+            _cancionesCollection.InsertOne(c);
 
-    public Usuario ObtenerUsuarioCorreo(string correo)
-    {
-        var filter = Builders<Usuario>.Filter.Eq(u => u.correo_electronico, correo);
-        return _usuariosCollection.Find(filter).FirstOrDefault();
-    }
+        public void ActualizarCancion(Cancion c) =>
+            _cancionesCollection.ReplaceOne(x => x._id == c._id, c);
 
-    public List<Cancion> ObtenerCanciones()
-    {
-        return _cancionesCollection.Find(c => true).ToList();
-    }
+        public void EliminarCancion(string titulo) =>
+            _cancionesCollection.DeleteOne(c => c.titulo == titulo);
 
-    public void AgregarCancion(Cancion cancion)
-    {
-        _cancionesCollection.InsertOne(cancion);
-    }
+        /* ============  USUARIOS  ============ */
 
-    public void ActualizarCancion(Cancion cancion)
-    {
-        var filtro = Builders<Cancion>.Filter.Eq(c => c._id, cancion._id);
-        _cancionesCollection.ReplaceOne(filtro, cancion);
-    }
+        public void GuardarUsuario(Usuario u) =>
+            _usuariosCollection.InsertOne(u);
 
-    public void EliminarCancion(string titulo)
-    {
-        var filtro = Builders<Cancion>.Filter.Eq(c => c.titulo, titulo);
-        _cancionesCollection.DeleteOne(filtro);
-    }
+        public Usuario? ObtenerUsuarioCorreo(string correo) =>
+            _usuariosCollection.Find(u => u.correo_electronico == correo).FirstOrDefault();
 
-    public void GuardarPlaylist(Playlist playlist)
-    {
-        _playlistsCollection.InsertOne(playlist);
-    }
+        /* ============  PLAYLISTS  ============ */
 
-    public List<Playlist> ObtenerPlaylistsPorUsuario(ObjectId usuarioId)
-    {
-        return _playlistsCollection.Find(p => p.usuarioId == usuarioId).ToList();
+        public void GuardarPlaylist(Playlist p) =>
+            _playlistsCollection.InsertOne(p);
+
+        /// <summary>
+        /// Guarda una playlist privada para el usuario en sesión.
+        /// </summary>
+        public void GuardarPlaylistPrivada(string nombre, IEnumerable<ObjectId> canciones)
+        {
+            var playlist = new Playlist
+            {
+                _id       = ObjectId.GenerateNewId(),
+                usuarioId = Session.UserId,   // Session viene del mismo namespace
+                nombre    = nombre,
+                canciones = canciones.ToList()
+            };
+            GuardarPlaylist(playlist);
+        }
+
+        public List<Playlist> ObtenerPlaylistsPorUsuario(ObjectId usuarioId) =>
+            _playlistsCollection.Find(p => p.usuarioId == usuarioId).ToList();
     }
 }
