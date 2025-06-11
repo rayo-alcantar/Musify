@@ -194,3 +194,4 @@ C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\refint\Inten
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\Intento4.pdb
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\Intento4.genruntimeconfig.cache
 C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\ref\Intento4.dll
+C:\Users\angel\Documents\Intento4\Intento4\obj\Debug\net8.0-windows\Intento4.sourcelink.json
