@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Intento4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e148c50aba421d6ffbcd1e4c456f24701359c2ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fc07978dafb91ee9359eae7ad349fb8679cf8fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Intento4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Intento4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

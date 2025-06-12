@@ -6,13 +6,12 @@ using System.IO;
 using System.Linq;               // Para .Select(...)
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Threading;
 using System.Collections.Generic;
 using MongoDB.Driver;
 using System.Diagnostics;
-using System.Windows.Automation;  // Para AutomationProperties
 
 namespace Intento4
 {
@@ -22,9 +21,11 @@ namespace Intento4
         private GridFSBucket gridFS;
         private DispatcherTimer playbackTimer;
         private bool isDraggingSlider = false;
-        public List<Cancion> ListaActual { get; private set; } = new List<Cancion>();
         private int currentSongIndex;
         private bool isPaused = false;
+
+        // Lista de canciones actual
+        public List<Cancion> ListaActual { get; private set; } = new List<Cancion>();
 
         public MainWindow()
         {
@@ -32,31 +33,36 @@ namespace Intento4
             {
                 InitializeComponent();
 
-                // Timer para actualizar el slider cada segundo
+                // 1) Configurar timer para actualizar el slider de posición
                 playbackTimer = new DispatcherTimer
                 {
                     Interval = TimeSpan.FromSeconds(1)
                 };
                 playbackTimer.Tick += PlaybackTimer_Tick;
 
-                // Conexión a MongoDB
+                // 2) Inicializar volumen inicial
+                mediaPlayer.Volume = VolumeSlider.Value;
+
+                // 3) Conexión a MongoDB y GridFS
                 var client = new MongoClient("mongodb+srv://Musify:Spiderman123@cluster0.ok95e.mongodb.net/Musify?retryWrites=true&w=majority");
                 var database = client.GetDatabase("Musify");
                 gridFS = new GridFSBucket(database);
 
-                // Carga inicial
+                // 4) Carga inicial de interfaz y datos
                 ShowInicio2_Click(null, null);
                 CargarCancionesDesdeMongoDB();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error crítico al iniciar la aplicación: {ex.Message}", 
-                                "Error de inicio", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Error al iniciar la aplicación: {ex.Message}",
+                                "Error Crítico",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Error);
                 Application.Current.Shutdown();
             }
         }
 
-        /// <summary>Lee todas las canciones desde GridFS y las muestra.</summary>
+        /// <summary>Carga las canciones desde GridFS y las muestra.</summary>
         private async void CargarCancionesDesdeMongoDB()
         {
             try
@@ -71,12 +77,8 @@ namespace Intento4
                 }).ToList();
 
                 PlayerStatus.Text = $"Se cargaron {ListaActual.Count} canciones.";
-
-                if (ListaActual.Count > 0)
-                {
-                    currentSongIndex = 0;
+                if (ListaActual.Any())
                     ReproducirCancionDesdeMongoDB(ListaActual[0]._id);
-                }
             }
             catch (Exception ex)
             {
@@ -84,100 +86,82 @@ namespace Intento4
             }
         }
 
-        /// <summary>Permite que páginas externas actualicen la lista de reproducción.</summary>
-        public void ActualizarListaReproduccion(List<Cancion> nuevasCanciones)
+        /// <summary>Actualiza la playlist desde otras páginas.</summary>
+        public void ActualizarListaReproduccion(List<Cancion> nuevas)
         {
             try
             {
-                ListaActual = nuevasCanciones;
-                PlayerStatus.Text = $"Lista actualizada: {ListaActual.Count} canciones.";
-
-                if (ListaActual.Count > 0)
-                {
-                    currentSongIndex = 0;
+                ListaActual = nuevas;
+                PlayerStatus.Text = $"Playlist actualizada: {nuevas.Count} canciones.";
+                if (ListaActual.Any())
                     ReproducirCancionDesdeMongoDB(ListaActual[0]._id);
-                }
             }
             catch (Exception ex)
             {
-                PlayerStatus.Text = $"Error al actualizar playlist: {ex.Message}";
+                PlayerStatus.Text = $"Error actualizando playlist: {ex.Message}";
             }
         }
 
-        /// <summary>Descarga y reproduce la canción dada su ObjectId de GridFS.</summary>
+        /// <summary>Descarga desde GridFS y reproduce la canción.</summary>
         public async void ReproducirCancionDesdeMongoDB(ObjectId id)
         {
-            string tempFilePath = null;
+            string tempPath = null;
             try
             {
                 mediaPlayer.Stop();
 
-                var fileInfo = await gridFS.Find(Builders<GridFSFileInfo>.Filter.Eq("_id", id))
-                                          .FirstOrDefaultAsync();
+                // Obtener metadatos
+                var fileInfo = await gridFS.Find(Builders<GridFSFileInfo>.Filter.Eq("_id", id)).FirstOrDefaultAsync();
                 if (fileInfo == null)
                 {
                     PlayerStatus.Text = "Canción no encontrada.";
                     return;
                 }
 
-                // Mostrar metadatos
+                // Mostrar título y artista
                 SongTitle.Text  = fileInfo.Metadata.GetValue("titulo",  "Título desconocido").AsString;
                 SongArtist.Text = fileInfo.Metadata.GetValue("artista", "Artista desconocido").AsString;
 
-                // Ruta temporal
-                tempFilePath = Path.Combine(Path.GetTempPath(),
-                                           $"{Guid.NewGuid()}_{fileInfo.Filename}");
-                using (var fs = new FileStream(tempFilePath, FileMode.Create, FileAccess.Write, FileShare.None))
-                {
-                    await gridFS.DownloadToStreamAsync(id, fs);
-                }
+                // Generar archivo temporal y descargar
+                tempPath = Path.Combine(Path.GetTempPath(), $"{Guid.NewGuid()}_{fileInfo.Filename}");
+                using var fs = new FileStream(tempPath, FileMode.Create, FileAccess.Write, FileShare.None);
+                await gridFS.DownloadToStreamAsync(id, fs);
 
-                // Ajustar máximo del slider una vez cargue media
+                // Ajustar el máximo del slider una vez abra el media
                 mediaPlayer.MediaOpened += (s, e) =>
                 {
-                    try
-                    {
-                        if (mediaPlayer.NaturalDuration.HasTimeSpan)
-                            PositionSlider.Maximum = mediaPlayer.NaturalDuration.TimeSpan.TotalSeconds;
-                    }
-                    catch (Exception mex) { Debug.WriteLine($"MediaOpened err: {mex.Message}"); }
+                    if (mediaPlayer.NaturalDuration.HasTimeSpan)
+                        PositionSlider.Maximum = mediaPlayer.NaturalDuration.TimeSpan.TotalSeconds;
                 };
 
-                // Reproducir
-                mediaPlayer.Open(new Uri(tempFilePath));
+                // Iniciar reproducción y timer
+                mediaPlayer.Open(new Uri(tempPath));
                 mediaPlayer.Play();
                 playbackTimer.Start();
 
-                PlayerStatus.Text = "Reproduciendo: " + fileInfo.Filename;
+                PlayerStatus.Text = $"Reproduciendo: {fileInfo.Filename}";
 
-                // Cuando termine, parar timer y borrar temporal
+                // Al finalizar, detener timer y eliminar archivo temporal
                 mediaPlayer.MediaEnded += (s, e) =>
                 {
                     playbackTimer.Stop();
-                    try { File.Delete(tempFilePath); }
-                    catch (Exception cle) { Debug.WriteLine($"Cleanup err: {cle.Message}"); }
+                    try { File.Delete(tempPath); }
+                    catch { /* ignore */ }
                 };
             }
             catch (Exception ex)
             {
                 PlayerStatus.Text = $"Error reproducción: {ex.Message}";
-                try { if (!string.IsNullOrEmpty(tempFilePath)) File.Delete(tempFilePath); }
+                try { if (!string.IsNullOrEmpty(tempPath)) File.Delete(tempPath); }
                 catch { }
             }
         }
 
-        /// <summary>Actualiza el slider según avance la canción.</summary>
+        /// <summary>Actualiza el slider de posición cada segundo.</summary>
         private void PlaybackTimer_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                if (!isDraggingSlider && mediaPlayer.NaturalDuration.HasTimeSpan)
-                    PositionSlider.Value = mediaPlayer.Position.TotalSeconds;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Timer err: {ex.Message}");
-            }
+            if (!isDraggingSlider && mediaPlayer.NaturalDuration.HasTimeSpan)
+                PositionSlider.Value = mediaPlayer.Position.TotalSeconds;
         }
 
         private void PositionSlider_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -187,96 +171,66 @@ namespace Intento4
 
         private void PositionSlider_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
-            try
-            {
-                isDraggingSlider = false;
-                mediaPlayer.Position = TimeSpan.FromSeconds(PositionSlider.Value);
-            }
-            catch (Exception ex)
-            {
-                PlayerStatus.Text = $"Error al cambiar posición: {ex.Message}";
-            }
+            isDraggingSlider = false;
+            mediaPlayer.Position = TimeSpan.FromSeconds(PositionSlider.Value);
         }
 
-        // ----------------------------------------------------
-        //  Navegación entre páginas (botones laterales)
-        // ----------------------------------------------------
+        /// <summary>Maneja el cambio de volumen desde el slider.</summary>
+        private void VolumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            mediaPlayer.Volume = e.NewValue;
+            // Podrías actualizar PlayerStatus.Text = $"Volumen: {(int)(e.NewValue*100)}%";
+        }
+
+        // ---------------- Navegación entre páginas ----------------
         private void ShowInicio2_Click(object sender, RoutedEventArgs e)
         {
-            try { MainFrame.Navigate(new InicioPage(this)); }
-            catch (Exception ex) { PlayerStatus.Text = $"Error Inicio: {ex.Message}"; }
+            MainFrame.Navigate(new InicioPage(this));
         }
 
         private void ShowExplorar_Click(object sender, RoutedEventArgs e)
         {
-            try { MainFrame.Navigate(new ExplorarPage(this)); }
-            catch (Exception ex) { PlayerStatus.Text = $"Error Explorar: {ex.Message}"; }
+            MainFrame.Navigate(new ExplorarPage(this));
         }
 
         private void ShowTuBiblioteca_Click(object sender, RoutedEventArgs e)
         {
-            try { MainFrame.Navigate(new BibliotecaPage(this)); }
-            catch (Exception ex) { PlayerStatus.Text = $"Error Biblioteca: {ex.Message}"; }
+            MainFrame.Navigate(new BibliotecaPage(this));
         }
 
         private void ShowPlaylist_Click(object sender, RoutedEventArgs e)
         {
-            try { MainFrame.Navigate(new PlaylistPage(this)); }
-            catch (Exception ex) { PlayerStatus.Text = $"Error Playlist: {ex.Message}"; }
+            MainFrame.Navigate(new PlaylistPage(this));
         }
 
-        // ----------------------------------------------------
-        //  Controles de reproducción
-        // ----------------------------------------------------
+        // ---------------- Controles de reproducción ----------------
         private void PreviousSong_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                if (ListaActual.Count == 0) return;
-                currentSongIndex = (currentSongIndex - 1 + ListaActual.Count) % ListaActual.Count;
-                ReproducirCancionDesdeMongoDB(ListaActual[currentSongIndex]._id);
-            }
-            catch (Exception ex)
-            {
-                PlayerStatus.Text = $"Error atrás: {ex.Message}";
-            }
+            if (!ListaActual.Any()) return;
+            currentSongIndex = (currentSongIndex - 1 + ListaActual.Count) % ListaActual.Count;
+            ReproducirCancionDesdeMongoDB(ListaActual[currentSongIndex]._id);
         }
 
         private void NextSong_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                if (ListaActual.Count == 0) return;
-                currentSongIndex = (currentSongIndex + 1) % ListaActual.Count;
-                ReproducirCancionDesdeMongoDB(ListaActual[currentSongIndex]._id);
-            }
-            catch (Exception ex)
-            {
-                PlayerStatus.Text = $"Error adelante: {ex.Message}";
-            }
+            if (!ListaActual.Any()) return;
+            currentSongIndex = (currentSongIndex + 1) % ListaActual.Count;
+            ReproducirCancionDesdeMongoDB(ListaActual[currentSongIndex]._id);
         }
 
         private void PauseSong_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (isPaused)
             {
-                if (isPaused)
-                {
-                    mediaPlayer.Play();
-                    PlayerStatus.Text = "Reproduciendo";
-                    isPaused = false;
-                }
-                else
-                {
-                    mediaPlayer.Pause();
-                    PlayerStatus.Text = "Pausado";
-                    isPaused = true;
-                }
+                mediaPlayer.Play();
+                PlayerStatus.Text = "Reproduciendo";
             }
-            catch (Exception ex)
+            else
             {
-                PlayerStatus.Text = $"Error pausar: {ex.Message}";
+                mediaPlayer.Pause();
+                PlayerStatus.Text = "Pausado";
             }
+            isPaused = !isPaused;
         }
     }
 }
