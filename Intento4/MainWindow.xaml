@@ -24,8 +24,7 @@
                        FontWeight="Bold"/>
 
             <!-- Botones de navegación -->
-            <Button x:Name="InicioButton"
-                    Content="Inicio"
+            <Button x:Name="InicioButton" Content="Inicio"
                     ToolTip="Ir a Inicio"
                     AutomationProperties.Name="Botón Inicio"
                     Margin="10"
@@ -34,8 +33,7 @@
                     BorderBrush="Transparent"
                     Click="ShowInicio2_Click"/>
 
-            <Button x:Name="ExplorarButton"
-                    Content="Explorar"
+            <Button x:Name="ExplorarButton" Content="Explorar"
                     ToolTip="Ir a Explorar"
                     AutomationProperties.Name="Botón Explorar"
                     Margin="10"
@@ -44,8 +42,7 @@
                     BorderBrush="Transparent"
                     Click="ShowExplorar_Click"/>
 
-            <Button x:Name="BibliotecaButton"
-                    Content="Tu Biblioteca"
+            <Button x:Name="BibliotecaButton" Content="Tu Biblioteca"
                     ToolTip="Ir a Tu Biblioteca"
                     AutomationProperties.Name="Botón Tu Biblioteca"
                     Margin="10"
@@ -54,8 +51,7 @@
                     BorderBrush="Transparent"
                     Click="ShowTuBiblioteca_Click"/>
 
-            <Button x:Name="PlaylistButton"
-                    Content="Crear Playlist"
+            <Button x:Name="PlaylistButton" Content="Crear Playlist"
                     ToolTip="Ir a Crear Playlist"
                     AutomationProperties.Name="Botón Crear Playlist"
                     Margin="10"
@@ -113,18 +109,17 @@
               DockPanel.Dock="Bottom"
               Background="#1A1A1A"
               Height="100"
-              VerticalAlignment="Bottom"
-              Margin="0,0,0,0">
+              VerticalAlignment="Bottom">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>    <!-- Álbum art -->
-                <ColumnDefinition Width="2*"/>      <!-- Título/Artista -->
-                <ColumnDefinition Width="Auto"/>    <!-- Controles anteriores/pausa/siguiente -->
-                <ColumnDefinition Width="3*"/>      <!-- Slider de posición -->
-                <ColumnDefinition Width="1*"/>      <!-- Slider de volumen -->
-                <ColumnDefinition Width="Auto"/>    <!-- Estado del reproductor -->
+                <ColumnDefinition Width="Auto"/>    
+                <ColumnDefinition Width="2*"/>      
+                <ColumnDefinition Width="Auto"/>    
+                <ColumnDefinition Width="3*"/>      
+                <ColumnDefinition Width="1*"/>      
+                <ColumnDefinition Width="Auto"/>    
             </Grid.ColumnDefinitions>
 
-            <!-- 1) Imagen de álbum o logo -->
+            <!-- 1) Álbum art -->
             <Image x:Name="AlbumArtImage"
                    Grid.Column="0"
                    Source="Images\spotify-icon-spotify-logo-spotify-symbol-logo-set-free-vector.jpg"
@@ -151,72 +146,57 @@
                            FontSize="12"/>
             </StackPanel>
 
-            <!-- 3) Botones de control -->
+            <!-- 3) Controles -->
             <StackPanel Grid.Column="2"
                         Orientation="Horizontal"
                         VerticalAlignment="Center"
                         Margin="10">
-                <Button x:Name="PreviousButton"
-                        Content="⏮"
-                        Width="40" Height="40"
-                        Background="Transparent"
-                        Foreground="White"
-                        BorderBrush="Transparent"
+                <Button x:Name="PreviousButton" Content="⏮" Width="40" Height="40"
+                        Background="Transparent" Foreground="White" BorderBrush="Transparent"
                         ToolTip="Canción anterior"
                         AutomationProperties.Name="Botón Canción Anterior"
                         Click="PreviousSong_Click"/>
-
-                <Button x:Name="PauseButton"
-                        Content="⏸"
-                        Width="40" Height="40"
-                        Background="Transparent"
-                        Foreground="White"
-                        BorderBrush="Transparent"
+                <Button x:Name="PauseButton" Content="⏸" Width="40" Height="40"
+                        Background="Transparent" Foreground="White" BorderBrush="Transparent"
                         ToolTip="Pausar/Reanudar"
                         AutomationProperties.Name="Botón Pausar/Reanudar"
                         Click="PauseSong_Click"/>
-
-                <Button x:Name="NextButton"
-                        Content="⏭"
-                        Width="40" Height="40"
-                        Background="Transparent"
-                        Foreground="White"
-                        BorderBrush="Transparent"
+                <Button x:Name="NextButton" Content="⏭" Width="40" Height="40"
+                        Background="Transparent" Foreground="White" BorderBrush="Transparent"
                         ToolTip="Siguiente Canción"
                         AutomationProperties.Name="Botón Canción Siguiente"
                         Click="NextSong_Click"/>
+                <Button x:Name="DeleteButton" Content="🗑" Width="40" Height="40"
+                        Background="Transparent" Foreground="White" BorderBrush="Transparent"
+                        ToolTip="Eliminar Canción"
+                        AutomationProperties.Name="Botón Eliminar Canción"
+                        Click="DeleteSong_Click"/>
             </StackPanel>
 
-            <!-- 4) Slider de posición -->
+            <!-- 4) Slider posición -->
             <Slider x:Name="PositionSlider"
                     Grid.Column="3"
                     VerticalAlignment="Center"
-                    Minimum="0"
-                    Maximum="100"
-                    Value="0"
-                    Background="#333333"
-                    Foreground="#1DB954"
-                    BorderBrush="#1DB954"
+                    Minimum="0" Maximum="100" Value="0"
+                    Background="#333333" Foreground="#1DB954" BorderBrush="#1DB954"
                     ToolTip="Posición de reproducción"
                     AutomationProperties.Name="Barra de posición"
                     PreviewMouseLeftButtonDown="PositionSlider_PreviewMouseDown"
                     PreviewMouseLeftButtonUp="PositionSlider_PreviewMouseUp"/>
 
-            <!-- 5) Slider de volumen -->
+            <!-- 5) Slider volumen -->
             <Slider x:Name="VolumeSlider"
                     Grid.Column="4"
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="1" Value="0.5"
                     SmallChange="0.05" LargeChange="0.1"
                     Width="100"
-                    Background="#333333"
-                    Foreground="#1DB954"
-                    BorderBrush="#1DB954"
+                    Background="#333333" Foreground="#1DB954" BorderBrush="#1DB954"
                     ToolTip="Volumen (0 a 100%)"
                     AutomationProperties.Name="Barra de volumen"
                     ValueChanged="VolumeSlider_ValueChanged"/>
 
-            <!-- 6) Estado del reproductor -->
+            <!-- 6) Estado -->
             <TextBlock x:Name="PlayerStatus"
                        Grid.Column="5"
                        Text="Estado del reproductor"
