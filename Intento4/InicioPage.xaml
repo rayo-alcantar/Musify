@@ -8,71 +8,54 @@
       d:DesignHeight="800" d:DesignWidth="1720">
 
     <DockPanel LastChildFill="True">
-        <!-- CONTENIDO PRINCIPAL -->
         <Grid Background="#121212" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> <RowDefinition Height="Auto"/> <RowDefinition Height="*"/>    </Grid.RowDefinitions>
 
-            <!-- Títulos -->
-            <TextBlock Text="Bienvenido a Musify"
+            <TextBlock Grid.Row="0" Text="Bienvenido a Musify"
                        Foreground="White" FontSize="30" FontWeight="Bold"
-                       Margin="200,14,0,0" VerticalAlignment="Top"/>
-            <TextBlock Text="Música recomendada para ti"
+                       Margin="200,14,0,0" HorizontalAlignment="Left"/>
+            <TextBlock Grid.Row="1" Text="Música recomendada para ti"
                        Foreground="Gray" FontSize="14"
-                       Margin="200,58,0,0"  VerticalAlignment="Top"/>
+                       Margin="200,0,0,10" HorizontalAlignment="Left"/>
 
-            <!-- ***** BOTONES DE ÁLBUMES ***** -->
-            <Button Margin="223,100,1087,479"
-                    Width="180" Height="180"
-                    Click="SabrinaButton_Click"
-                    AutomationProperties.Name="Álbum Sabrina">
-                <Button.Background>
-                    <ImageBrush ImageSource="Images/Sabrina.jpg"/>
-                </Button.Background>
-            </Button>
+            <WrapPanel Grid.Row="2" Margin="200,0,0,0" HorizontalAlignment="Left">
+                <Button Width="180" Height="180" Margin="0,0,20,20" Click="SabrinaButton_Click" AutomationProperties.Name="Álbum Sabrina">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Sabrina.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
 
-            <Button Margin="477,100,833,479"
-                    Width="180" Height="180"
-                    Click="RauwButton_Click"
-                    AutomationProperties.Name="Álbum Rauw">
-                <Button.Background>
-                    <ImageBrush ImageSource="Images/Rauw.jpg"/>
-                </Button.Background>
-            </Button>
+                <Button Width="180" Height="180" Margin="0,0,20,20" Click="RauwButton_Click" AutomationProperties.Name="Álbum Rauw">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Rauw.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
 
-            <Button Margin="730,100,580,479"
-                    Width="180" Height="180"
-                    Click="JadenButton_Click"
-                    AutomationProperties.Name="Álbum Jaden">
-                <Button.Background>
-                    <ImageBrush ImageSource="Images/Jaden.jpg"/>
-                </Button.Background>
-            </Button>
+                <Button Width="180" Height="180" Margin="0,0,20,20" Click="JadenButton_Click" AutomationProperties.Name="Álbum Jaden">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Jaden.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
 
-            <Button Margin="206,435,1087,155"
-                    Width="180" Height="180"
-                    Click="UVSTButton_Click"
-                    AutomationProperties.Name="Álbum Un Verano Sin Ti">
-                <Button.Background>
-                    <ImageBrush ImageSource="Images/Un Verano Sin Ti.jpg"/>
-                </Button.Background>
-            </Button>
+                <Button Width="180" Height="180" Margin="0,0,20,20" Click="UVSTButton_Click" AutomationProperties.Name="Álbum Un Verano Sin Ti">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Un Verano Sin Ti.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
 
-            <Button Margin="443,435,875,155"
-                    Width="180" Height="180"
-                    Click="_1989Button_Click"
-                    AutomationProperties.Name="Álbum 1989">
-                <Button.Background>
-                    <ImageBrush ImageSource="Images/1989.jpg"/>
-                </Button.Background>
-            </Button>
+                <Button Width="180" Height="180" Margin="0,0,20,20" Click="_1989Button_Click" AutomationProperties.Name="Álbum 1989">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/1989.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
 
-            <Button Margin="684,435,634,155"
-                    Width="180" Height="180"
-                    Click="JusticeButton_Click"
-                    AutomationProperties.Name="Álbum Justice">
-                <Button.Background>
-                    <ImageBrush ImageSource="Images/Justice.jpg"/>
-                </Button.Background>
-            </Button>
+                <Button Width="180" Height="180" Margin="0,0,20,20" Click="JusticeButton_Click" AutomationProperties.Name="Álbum Justice">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/Justice.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
 
         </Grid>
     </DockPanel>

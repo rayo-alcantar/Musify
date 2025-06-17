@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Intento4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcb85321ef23bff8b50a2c6f1b09231eeadd0edb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Intento4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Intento4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

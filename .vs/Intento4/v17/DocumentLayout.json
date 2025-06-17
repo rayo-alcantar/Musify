@@ -1,137 +1,213 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\",
+  "WorkspaceRootPath": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\explorarpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\explorarpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\rauw.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\rauw.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\bibliotecapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\bibliotecapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\1989.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\1989.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\bibliotecapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\bibliotecapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\1989.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\1989.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\justice.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\justice.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\jaden.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\jaden.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\registrarwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\registrarwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\playlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\playlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\iniciopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\iniciopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\loginwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\servicios\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\servicios\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\models\\cancion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\models\\cancion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\models\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\models\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\loginadministrador.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\loginadministrador.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\1989.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\1989.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\uvst.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\uvst.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\sabrina.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\sabrina.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\ryb.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\ryb.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\reggaeton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\reggaeton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\rauw.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\rauw.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\pop.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\pop.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\rock.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\rock.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\1989.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\1989.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\loginwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\loginwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\registrarwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\registrarwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\registrarwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\AppData\\Local\\Temp\\.vsdbgsrc\\2c2dbd0e8613db5547a15cc48351e3de58ea1cb004f2006ca6c634e3eb5ff18c\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\intento4.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\intento4.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\intento4.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\ryb.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\ryb.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\ryb.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\rock.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\rock.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\rock.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\reggaeton.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\reggaeton.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\reggaeton.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\rauw.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\rauw.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\rauw.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\1989.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\1989.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\1989.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\sabrina.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\sabrina.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\sabrina.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\uvst.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\uvst.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\uvst.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\pop.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\pop.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\pop.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\playlistpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\playlistpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\playlistpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\loginadministrador.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\loginadministrador.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\loginadministrador.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\justice.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\justice.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\justice.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\jaden.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\jaden.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\jaden.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\jaden.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\jaden.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\jaden.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\mainwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\mainwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\mainwindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\explorarpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\explorarpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\explorarpage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\explorarpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\explorarpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\explorarpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\bibliotecapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\bibliotecapage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\admindashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\admindashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\admindashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\iniciopage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\iniciopage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\iniciopage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\iniciopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\luisa\\desktop\\musify\\musify\\intento4\\iniciopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\iniciopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|c:\\users\\usuario\\onedrive\\documentos\\intento4\\intento4\\admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F25C82FC-7FDF-4D3D-9990-39E333F14D6A}|Intento4\\Intento4.csproj|solutionrelative:intento4\\admindashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -141,33 +217,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 27,
               "Title": "1989.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\1989.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\1989.xaml.cs",
               "RelativeDocumentMoniker": "Intento4\\1989.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\1989.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\1989.xaml.cs",
               "RelativeToolTip": "Intento4\\1989.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T23:26:00.566Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ca8cc5c7-0231-406a-95cd-aa5ed6ac0190}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 3,
+              "Title": "BibliotecaPage.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\BibliotecaPage.xaml",
+              "RelativeDocumentMoniker": "Intento4\\BibliotecaPage.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\BibliotecaPage.xaml",
+              "RelativeToolTip": "Intento4\\BibliotecaPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T01:38:22.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BibliotecaPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\BibliotecaPage.xaml.cs",
+              "RelativeDocumentMoniker": "Intento4\\BibliotecaPage.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\BibliotecaPage.xaml.cs",
+              "RelativeToolTip": "Intento4\\BibliotecaPage.xaml.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAYwF4AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T22:34:19.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AdminDashboard.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\AdminDashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\AdminDashboard.xaml",
               "RelativeDocumentMoniker": "Intento4\\AdminDashboard.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\AdminDashboard.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\AdminDashboard.xaml",
               "RelativeToolTip": "Intento4\\AdminDashboard.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-09T23:32:42.854Z",
@@ -175,111 +286,307 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Rauw.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Rauw.xaml",
-              "RelativeDocumentMoniker": "Intento4\\Rauw.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Rauw.xaml",
-              "RelativeToolTip": "Intento4\\Rauw.xaml",
+              "DocumentIndex": 0,
+              "Title": "ExplorarPage.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\ExplorarPage.xaml",
+              "RelativeDocumentMoniker": "Intento4\\ExplorarPage.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\ExplorarPage.xaml",
+              "RelativeToolTip": "Intento4\\ExplorarPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T23:31:19.558Z",
+              "WhenOpened": "2025-06-16T02:50:11.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "Intento4\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\LoginWindow.xaml",
-              "RelativeToolTip": "Intento4\\LoginWindow.xaml",
+              "DocumentIndex": 4,
+              "Title": "Justice.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Justice.xaml",
+              "RelativeDocumentMoniker": "Intento4\\Justice.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Justice.xaml",
+              "RelativeToolTip": "Intento4\\Justice.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T23:21:29.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T02:18:51.642Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Intento4\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Intento4\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAJIAAAAAz8zMzMwqwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T23:21:14.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Intento4\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "Intento4\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T22:24:40.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "1989.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\1989.xaml",
-              "RelativeDocumentMoniker": "Intento4\\1989.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\1989.xaml",
-              "RelativeToolTip": "Intento4\\1989.xaml",
+              "Title": "Jaden.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Jaden.xaml",
+              "RelativeDocumentMoniker": "Intento4\\Jaden.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Jaden.xaml",
+              "RelativeToolTip": "Intento4\\Jaden.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T23:26:10.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T02:18:47.598Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Intento4\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\MainWindow.xaml",
-              "RelativeToolTip": "Intento4\\MainWindow.xaml",
+              "Title": "RegistrarWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\RegistrarWindow.xaml",
+              "RelativeDocumentMoniker": "Intento4\\RegistrarWindow.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\RegistrarWindow.xaml",
+              "RelativeToolTip": "Intento4\\RegistrarWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T23:19:54.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T01:58:12.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlaylistPage.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\PlaylistPage.xaml",
+              "RelativeDocumentMoniker": "Intento4\\PlaylistPage.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\PlaylistPage.xaml",
+              "RelativeToolTip": "Intento4\\PlaylistPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T01:58:17.362Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RegistrarWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\RegistrarWindow.xaml",
-              "RelativeDocumentMoniker": "Intento4\\RegistrarWindow.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\RegistrarWindow.xaml",
-              "RelativeToolTip": "Intento4\\RegistrarWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Title": "InicioPage.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\InicioPage.xaml",
+              "RelativeDocumentMoniker": "Intento4\\InicioPage.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\InicioPage.xaml",
+              "RelativeToolTip": "Intento4\\InicioPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:37:59.316Z",
+              "WhenOpened": "2025-06-16T01:47:58.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\App.xaml",
+              "RelativeDocumentMoniker": "Intento4\\App.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\App.xaml",
+              "RelativeToolTip": "Intento4\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T02:50:08.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Rauw.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Rauw.xaml",
-              "RelativeDocumentMoniker": "Intento4\\Rauw.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Rauw.xaml",
-              "RelativeToolTip": "Intento4\\Rauw.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Intento4\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Models\\Usuario.cs",
+              "RelativeToolTip": "Intento4\\Models\\Usuario.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAowBAAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T04:19:01.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Intento4\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\MainWindow.xaml",
+              "RelativeToolTip": "Intento4\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:37:43.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T23:19:54.411Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "Intento4\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginWindow.xaml",
+              "RelativeToolTip": "Intento4\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-09T23:21:29.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cancion.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Models\\Cancion.cs",
+              "RelativeDocumentMoniker": "Intento4\\Models\\Cancion.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Models\\Cancion.cs",
+              "RelativeToolTip": "Intento4\\Models\\Cancion.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:28:59.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Playlist.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Models\\Playlist.cs",
+              "RelativeDocumentMoniker": "Intento4\\Models\\Playlist.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Models\\Playlist.cs",
+              "RelativeToolTip": "Intento4\\Models\\Playlist.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:29:03.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MongoDBService.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Servicios\\MongoDBService.cs",
+              "RelativeDocumentMoniker": "Intento4\\Servicios\\MongoDBService.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Servicios\\MongoDBService.cs",
+              "RelativeToolTip": "Intento4\\Servicios\\MongoDBService.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAYwE4AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T03:30:40.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginAdministrador.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginAdministrador.xaml",
+              "RelativeDocumentMoniker": "Intento4\\LoginAdministrador.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginAdministrador.xaml",
+              "RelativeToolTip": "Intento4\\LoginAdministrador.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T03:14:55.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UVST.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\UVST.xaml",
+              "RelativeDocumentMoniker": "Intento4\\UVST.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\UVST.xaml",
+              "RelativeToolTip": "Intento4\\UVST.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T01:58:06.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "1989.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\1989.xaml",
+              "RelativeDocumentMoniker": "Intento4\\1989.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\1989.xaml",
+              "RelativeToolTip": "Intento4\\1989.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-09T23:26:10.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Sabrina.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Sabrina.xaml",
+              "RelativeDocumentMoniker": "Intento4\\Sabrina.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Sabrina.xaml",
+              "RelativeToolTip": "Intento4\\Sabrina.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T02:34:33.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RyB.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\RyB.xaml",
+              "RelativeDocumentMoniker": "Intento4\\RyB.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\RyB.xaml",
+              "RelativeToolTip": "Intento4\\RyB.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T02:34:14.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Reggaeton.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Reggaeton.xaml",
+              "RelativeDocumentMoniker": "Intento4\\Reggaeton.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Reggaeton.xaml",
+              "RelativeToolTip": "Intento4\\Reggaeton.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T01:58:14.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Rauw.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Rauw.xaml",
+              "RelativeDocumentMoniker": "Intento4\\Rauw.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Rauw.xaml",
+              "RelativeToolTip": "Intento4\\Rauw.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-09T23:31:19.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Pop.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Pop.xaml",
+              "RelativeDocumentMoniker": "Intento4\\Pop.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Pop.xaml",
+              "RelativeToolTip": "Intento4\\Pop.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T02:25:58.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "Rock.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Rock.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Rock.xaml",
               "RelativeDocumentMoniker": "Intento4\\Rock.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Rock.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Rock.xaml",
+              "RelativeToolTip": "Intento4\\Rock.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-16T01:57:46.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Intento4\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Intento4\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T23:21:14.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Intento4\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "Intento4\\LoginWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T22:24:40.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RegistrarWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\RegistrarWindow.xaml",
+              "RelativeDocumentMoniker": "Intento4\\RegistrarWindow.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\RegistrarWindow.xaml",
+              "RelativeToolTip": "Intento4\\RegistrarWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-09T22:37:59.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Rauw.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Rauw.xaml",
+              "RelativeDocumentMoniker": "Intento4\\Rauw.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Rauw.xaml",
+              "RelativeToolTip": "Intento4\\Rauw.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-09T22:37:43.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Rock.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Rock.xaml",
+              "RelativeDocumentMoniker": "Intento4\\Rock.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Rock.xaml",
               "RelativeToolTip": "Intento4\\Rock.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -287,24 +594,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 28,
               "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "Intento4\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginWindow.xaml",
               "RelativeToolTip": "Intento4\\LoginWindow.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:25:36.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T22:25:36.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 34,
               "Title": "Reggaeton.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Reggaeton.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Reggaeton.xaml",
               "RelativeDocumentMoniker": "Intento4\\Reggaeton.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Reggaeton.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Reggaeton.xaml",
               "RelativeToolTip": "Intento4\\Reggaeton.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -312,11 +618,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 32,
               "Title": "RyB.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\RyB.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\RyB.xaml",
               "RelativeDocumentMoniker": "Intento4\\RyB.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\RyB.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\RyB.xaml",
               "RelativeToolTip": "Intento4\\RyB.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -324,11 +630,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 31,
               "Title": "Intento4.csproj",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Intento4.csproj",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Intento4.csproj",
               "RelativeDocumentMoniker": "Intento4\\Intento4.csproj",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Intento4.csproj",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Intento4.csproj",
               "RelativeToolTip": "Intento4\\Intento4.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -336,12 +642,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 30,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\AppData\\Local\\Temp\\.vsdbgsrc\\2c2dbd0e8613db5547a15cc48351e3de58ea1cb004f2006ca6c634e3eb5ff18c\\XamlReader.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\2c2dbd0e8613db5547a15cc48351e3de58ea1cb004f2006ca6c634e3eb5ff18c\\XamlReader.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Usuario\\AppData\\Local\\Temp\\.vsdbgsrc\\2c2dbd0e8613db5547a15cc48351e3de58ea1cb004f2006ca6c634e3eb5ff18c\\XamlReader.cs",
               "ToolTip": "C:\\Users\\Usuario\\AppData\\Local\\Temp\\.vsdbgsrc\\2c2dbd0e8613db5547a15cc48351e3de58ea1cb004f2006ca6c634e3eb5ff18c\\XamlReader.cs [Solo lectura]",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\2c2dbd0e8613db5547a15cc48351e3de58ea1cb004f2006ca6c634e3eb5ff18c\\XamlReader.cs [Solo lectura]",
+              "RelativeToolTip": "..\\..\\..\\..\\Usuario\\AppData\\Local\\Temp\\.vsdbgsrc\\2c2dbd0e8613db5547a15cc48351e3de58ea1cb004f2006ca6c634e3eb5ff18c\\XamlReader.cs [Solo lectura]",
               "ViewState": "AgIAAP0BAACAZGZmZmYAwP4BAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T23:10:10.041Z",
@@ -349,24 +655,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 36,
               "Title": "1989.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\1989.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\1989.xaml",
               "RelativeDocumentMoniker": "Intento4\\1989.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\1989.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\1989.xaml",
               "RelativeToolTip": "Intento4\\1989.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:38:45.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T22:38:45.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 37,
               "Title": "Sabrina.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Sabrina.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Sabrina.xaml",
               "RelativeDocumentMoniker": "Intento4\\Sabrina.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Sabrina.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Sabrina.xaml",
               "RelativeToolTip": "Intento4\\Sabrina.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -374,11 +678,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 38,
               "Title": "UVST.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\UVST.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\UVST.xaml",
               "RelativeDocumentMoniker": "Intento4\\UVST.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\UVST.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\UVST.xaml",
               "RelativeToolTip": "Intento4\\UVST.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -386,11 +690,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 39,
               "Title": "Pop.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Pop.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Pop.xaml",
               "RelativeDocumentMoniker": "Intento4\\Pop.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Pop.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Pop.xaml",
               "RelativeToolTip": "Intento4\\Pop.xaml",
               "ViewState": "AgIAABEAAAAAAAAAAABmPQ0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -398,11 +702,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 40,
               "Title": "PlaylistPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\PlaylistPage.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\PlaylistPage.xaml",
               "RelativeDocumentMoniker": "Intento4\\PlaylistPage.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\PlaylistPage.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\PlaylistPage.xaml",
               "RelativeToolTip": "Intento4\\PlaylistPage.xaml",
               "ViewState": "AgIAADsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -410,11 +714,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 41,
               "Title": "LoginAdministrador.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\LoginAdministrador.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginAdministrador.xaml",
               "RelativeDocumentMoniker": "Intento4\\LoginAdministrador.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\LoginAdministrador.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\LoginAdministrador.xaml",
               "RelativeToolTip": "Intento4\\LoginAdministrador.xaml",
               "ViewState": "AgIAABMAAACgMjMzMzMrwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -422,11 +726,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 42,
               "Title": "Justice.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Justice.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Justice.xaml",
               "RelativeDocumentMoniker": "Intento4\\Justice.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Justice.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Justice.xaml",
               "RelativeToolTip": "Intento4\\Justice.xaml",
               "ViewState": "AgIAABcAAACAZmZmZmYkwAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -434,11 +738,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 43,
               "Title": "Jaden.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Jaden.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Jaden.xaml",
               "RelativeDocumentMoniker": "Intento4\\Jaden.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Jaden.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Jaden.xaml",
               "RelativeToolTip": "Intento4\\Jaden.xaml",
               "ViewState": "AgIAABIAAADAy8zMzMwnwAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -446,11 +750,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 44,
               "Title": "Jaden.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Jaden.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Jaden.xaml.cs",
               "RelativeDocumentMoniker": "Intento4\\Jaden.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\Jaden.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\Jaden.xaml.cs",
               "RelativeToolTip": "Intento4\\Jaden.xaml.cs",
               "ViewState": "AgIAAAQAAADgNDMzMzMLwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -458,24 +762,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 45,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Intento4\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\MainWindow.xaml",
               "RelativeToolTip": "Intento4\\MainWindow.xaml",
-              "ViewState": "AgIAAE0AAACAZ2ZmZmYkwDkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:30:04.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T22:30:04.063Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 46,
               "Title": "ExplorarPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\ExplorarPage.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\ExplorarPage.xaml",
               "RelativeDocumentMoniker": "Intento4\\ExplorarPage.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\ExplorarPage.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\ExplorarPage.xaml",
               "RelativeToolTip": "Intento4\\ExplorarPage.xaml",
               "ViewState": "AgIAAD4AAAAA0szMzMwnwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -483,11 +785,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 47,
               "Title": "ExplorarPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\ExplorarPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\ExplorarPage.xaml.cs",
               "RelativeDocumentMoniker": "Intento4\\ExplorarPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\ExplorarPage.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\ExplorarPage.xaml.cs",
               "RelativeToolTip": "Intento4\\ExplorarPage.xaml.cs",
               "ViewState": "AgIAAFoAAAAAnJmZmZkuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -495,23 +797,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "BibliotecaPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\BibliotecaPage.xaml.cs",
-              "RelativeDocumentMoniker": "Intento4\\BibliotecaPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\BibliotecaPage.xaml.cs",
-              "RelativeToolTip": "Intento4\\BibliotecaPage.xaml.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T22:34:19.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 48,
               "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\App.xaml.cs",
               "RelativeDocumentMoniker": "Intento4\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\App.xaml.cs",
               "RelativeToolTip": "Intento4\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -519,11 +809,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 49,
               "Title": "AdminDashboard.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\AdminDashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\AdminDashboard.xaml.cs",
               "RelativeDocumentMoniker": "Intento4\\AdminDashboard.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\AdminDashboard.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\AdminDashboard.xaml.cs",
               "RelativeToolTip": "Intento4\\AdminDashboard.xaml.cs",
               "ViewState": "AgIAAGYBAAAAeJmZmZkuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -531,11 +821,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 50,
               "Title": "InicioPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\InicioPage.xaml",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\InicioPage.xaml",
               "RelativeDocumentMoniker": "Intento4\\InicioPage.xaml",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\InicioPage.xaml",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\InicioPage.xaml",
               "RelativeToolTip": "Intento4\\InicioPage.xaml",
               "ViewState": "AgIAACAAAACAxczMzMwnwDkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -543,16 +833,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 51,
               "Title": "InicioPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\InicioPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\InicioPage.xaml.cs",
               "RelativeDocumentMoniker": "Intento4\\InicioPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\Intento4\\Intento4\\InicioPage.xaml.cs",
+              "ToolTip": "C:\\Users\\luisa\\Desktop\\MUSIFY\\Musify\\Intento4\\InicioPage.xaml.cs",
               "RelativeToolTip": "Intento4\\InicioPage.xaml.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T22:24:13.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T22:24:13.455Z"
             }
           ]
         }
